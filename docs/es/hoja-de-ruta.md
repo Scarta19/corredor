@@ -28,7 +28,7 @@ administrar clientes.*
 - [x] **Módulo 5 — Renovaciones** — barrido nocturno con Arq, riesgo de fuga, tablero de ventanas del §15
 - [ ] Notificaciones: nuevo lead al equipo, acciones de renovación al asesor
 - [ ] Reglas de asignación de leads
-- [ ] Módulo 3 — WhatsApp Cloud API: webhook de entrada, captura, derivación
+- [x] **Módulo 3 — WhatsApp** — webhook firmado, clasificación de intención, derivación del §8. Faltan credenciales de Meta para enviar.
 
 ## Fase 3 — Inteligencia
 
@@ -38,7 +38,7 @@ instrumento comercial.*
 - [x] Esquema de predicciones con modelo, versión, variables y explicaciones ([ADR-0005](adr/0005-capa-de-inteligencia.md))
 - [x] Líneas base: puntaje de leads, riesgo de renovación, afinidad de venta cruzada
 - [x] **Módulo 6 — Dashboard** — embudo desde el historial, ventanas del §15, motivos de pérdida, solo gerencia
-- [ ] Comprensión de mensajes en reemplazo del menú numerado de WhatsApp
+- [x] Comprensión de mensajes en reemplazo del menú numerado (línea base por reglas)
 - [ ] Modelos entrenados, cuando haya suficientes oportunidades cerradas para aprender de ellas
 - [ ] Segmentación de clientes y automatizaciones comerciales
 

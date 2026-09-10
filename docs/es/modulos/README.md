@@ -24,7 +24,7 @@ reconstruir después.
 | 4 | CRM | En curso | [modulo-4-crm.md](modulo-4-crm.md) |
 | 5 | Renovaciones | Listo | [modulo-5-renovaciones.md](modulo-5-renovaciones.md) |
 | 6 | Dashboard | Listo | [modulo-6-dashboard.md](modulo-6-dashboard.md) |
-| 3 | WhatsApp | Pendiente | — |
+| 3 | WhatsApp | Listo (faltan credenciales de Meta) | [modulo-3-whatsapp.md](modulo-3-whatsapp.md) |
 
 El trasfondo más profundo está en los [ADR](../adr/README.md); este árbol los
 da por supuestos en vez de repetirlos.

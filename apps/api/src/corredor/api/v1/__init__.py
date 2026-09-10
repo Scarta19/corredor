@@ -10,6 +10,7 @@ from corredor.api.v1 import (
     ramos,
     renovaciones,
     solicitudes,
+    whatsapp,
 )
 
 router = APIRouter()
@@ -18,6 +19,7 @@ router.include_router(auth.router)
 router.include_router(crm.router)
 router.include_router(renovaciones.router)
 router.include_router(dashboard.router)
+router.include_router(whatsapp.router)
 router.include_router(ramos.router)
 router.include_router(solicitudes.router)
 

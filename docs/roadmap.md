@@ -28,7 +28,7 @@ managing clients.*
 - [x] **Módulo 5 — Renovaciones** — nightly Arq sweep, churn risk scoring, §15 bucket board
 - [ ] Notifications: new lead to the team, renewal actions to the advisor
 - [ ] Lead assignment rules
-- [ ] Módulo 3 — WhatsApp Cloud API: inbound webhook, capture, handoff
+- [x] **Módulo 3 — WhatsApp** — signed webhook, intent classification, §8 handoff. Needs Meta credentials to send.
 
 ## Phase 3 — Intelligence
 
@@ -38,7 +38,7 @@ instrument.*
 - [x] Prediction schema with model, version, features and explanations ([ADR-0005](adr/0005-capa-de-inteligencia.md))
 - [x] Baselines: lead scoring, renewal risk, cross-sell affinity
 - [x] **Módulo 6 — Dashboard** — funnel from the event log, §15 buckets, loss reasons, manager-only
-- [ ] Message understanding replacing the numbered WhatsApp menu
+- [x] Message understanding replacing the numbered WhatsApp menu (rule-based baseline)
 - [ ] Trained models, once there are enough closed opportunities to learn from
 - [ ] Client segmentation and commercial automations
 

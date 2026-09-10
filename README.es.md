@@ -33,10 +33,12 @@ agencias, cada una con su catálogo, sus formularios, su pipeline y su cartera.
 |---|--------|----------|--------|
 | 1 | **Web profesional** | Sitio público diseñado para generar acciones, no solo para informar | **Listo** |
 | 2 | **Cotizador inteligente** | Formularios por ramo → una solicitud estructurada, nunca un chat por transcribir | **Listo** |
-| 3 | **WhatsApp** | Un canal *hacia dentro* de la plataforma: recibe, clasifica y deriva a una persona | Pendiente |
+| 3 | **WhatsApp** | Un canal *hacia dentro* de la plataforma: recibe, clasifica y deriva a una persona | **Listo** ¹ |
 | 4 | **CRM** | Clientes, solicitudes, cotizaciones, pólizas y el pipeline comercial | **Listo** |
 | 5 | **Renovaciones** | Control de vencimientos con acciones escalonadas a 60/30/15/7 días | **Listo** |
 | 6 | **Dashboard** | Embudo de conversión, ventanas de renovación, motivos de pérdida | **Listo** |
+
+¹ Construido y probado de punta a punta; enviar requiere las credenciales de Meta Business de la agencia.
 
 ## Qué significa "con inteligencia desde el diseño"
 

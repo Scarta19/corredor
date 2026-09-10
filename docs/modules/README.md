@@ -23,7 +23,7 @@ reconstruct later.
 | 4 | CRM | In progress | [modulo-4-crm.md](modulo-4-crm.md) |
 | 5 | Renovaciones | Done | [modulo-5-renovaciones.md](modulo-5-renovaciones.md) |
 | 6 | Dashboard | Done | [modulo-6-dashboard.md](modulo-6-dashboard.md) |
-| 3 | WhatsApp | Planned | — |
+| 3 | WhatsApp | Done (needs Meta credentials) | [modulo-3-whatsapp.md](modulo-3-whatsapp.md) |
 
 Deeper background lives in the [ADRs](../adr/README.md); this tree assumes
 them rather than repeating them.
