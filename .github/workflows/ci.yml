@@ -33,7 +33,7 @@ jobs:
 
     env:
       ENVIRONMENT: test
-      SECRET_KEY: ci-only
+      SECRET_KEY: clave-solo-para-ci-de-al-menos-32-bytes
       DATABASE_URL: postgresql+asyncpg://corredor:corredor@localhost:5432/corredor
 
     steps:

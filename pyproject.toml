@@ -35,7 +35,9 @@ ignore = [
 ]
 
 [tool.ruff.lint.per-file-ignores]
-"tests/**" = ["S105", "S106"]
+# Hard-coded credentials in tests are fixtures, not secrets. The glob needs
+# the leading `**` because the suites live under apps/api/tests.
+"**/tests/**" = ["S105", "S106"]
 
 [tool.ruff.lint.isort]
 known-first-party = ["corredor", "corredor_ml"]

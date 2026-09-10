@@ -9,10 +9,22 @@ from __future__ import annotations
 from functools import lru_cache
 from typing import Literal
 
-from pydantic import Field, PostgresDsn, RedisDsn, SecretStr, computed_field
+from pydantic import (
+    Field,
+    PostgresDsn,
+    RedisDsn,
+    SecretStr,
+    computed_field,
+    model_validator,
+)
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 Environment = Literal["local", "test", "staging", "production"]
+
+#: The default key. Usable locally, refused anywhere that serves real users.
+CLAVE_DE_DESARROLLO = "desarrollo-local-no-usar-en-produccion-0000"
+
+LONGITUD_MINIMA_CLAVE = 32
 
 
 class Settings(BaseSettings):
@@ -30,7 +42,9 @@ class Settings(BaseSettings):
     api_v1_prefix: str = "/api/v1"
 
     # --- Security ---
-    secret_key: SecretStr = SecretStr("change-me-in-every-real-deployment")
+    #: Signs access tokens. HS256 requires at least 32 bytes of key material
+    #: (RFC 7518 §3.2); a shorter one weakens every token the platform issues.
+    secret_key: SecretStr = SecretStr(CLAVE_DE_DESARROLLO)
     access_token_ttl_minutes: int = 60 * 12
     jwt_algorithm: str = "HS256"
     cors_origins: list[str] = Field(default_factory=lambda: ["http://localhost:3000"])
@@ -65,6 +79,28 @@ class Settings(BaseSettings):
     @property
     def is_production(self) -> bool:
         return self.environment == "production"
+
+    @model_validator(mode="after")
+    def _validar_clave(self) -> Settings:
+        """Refuse to start with a key that cannot secure a token.
+
+        This fails at import time rather than at the first login, which is the
+        difference between a deploy that never goes live and one that issues
+        forgeable sessions until somebody notices.
+        """
+        clave = self.secret_key.get_secret_value()
+        if len(clave.encode()) < LONGITUD_MINIMA_CLAVE:
+            raise ValueError(
+                f"SECRET_KEY debe tener al menos {LONGITUD_MINIMA_CLAVE} bytes; "
+                f"tiene {len(clave.encode())}. Genera una con "
+                '`python -c "import secrets; print(secrets.token_urlsafe(48))"`.'
+            )
+        if self.environment in ("staging", "production") and clave == CLAVE_DE_DESARROLLO:
+            raise ValueError(
+                "SECRET_KEY sigue siendo la de desarrollo. "
+                f"Configura una propia antes de desplegar en {self.environment}."
+            )
+        return self
 
 
 @lru_cache
