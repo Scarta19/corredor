@@ -23,7 +23,7 @@ export const config = {
     telefono: process.env.NEXT_PUBLIC_PHONE ?? "+57 300 000 0000",
     whatsapp: process.env.NEXT_PUBLIC_WHATSAPP ?? "573000000000",
     email: process.env.NEXT_PUBLIC_EMAIL ?? "contacto@demo.test",
-    ciudad: process.env.NEXT_PUBLIC_CITY ?? "Caucasia, Antioquia",
+    ciudad: process.env.NEXT_PUBLIC_CITY ?? "Medellín, Antioquia",
     horario: "Lunes a viernes, 8:00 a.m. – 6:00 p.m.",
   },
 } as const;

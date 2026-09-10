@@ -1,5 +1,8 @@
 # Corredor
 
+[![CI](https://github.com/Scarta19/corredor/actions/workflows/ci.yml/badge.svg)](https://github.com/Scarta19/corredor/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 **An AI-native platform for insurance brokers.**
 
 Most brokerages run on a website that only informs, a WhatsApp number, and a

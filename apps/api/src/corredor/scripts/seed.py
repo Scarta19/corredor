@@ -69,7 +69,7 @@ NOMBRES = [
 ]
 
 EMPRESAS = [
-    "Constructora del Bajo Cauca S.A.S.",
+    "Constructora Los Andes S.A.S.",
     "Transportes Río Grande Ltda.",
     "Agroinsumos del Norte S.A.S.",
     "Comercializadora La Esperanza",
@@ -100,7 +100,7 @@ async def sembrar() -> None:
         tenant = Tenant(
             slug=SLUG_DEMO,
             nombre="Agencia Demo de Seguros",
-            ciudad="Caucasia",
+            ciudad="Medellín",
             telefono="+57 300 000 0000",
             email="contacto@demo.test",
             configuracion={
@@ -162,7 +162,7 @@ async def sembrar() -> None:
                     documento=str(1_000_000_000 + rng.randrange(99_999_999)),
                     telefono=f"+57 3{rng.randrange(10, 25)}{rng.randrange(1000000, 9999999)}",
                     email=f"{nombre.split()[0].lower()}{i}@demo.test",
-                    ciudad=rng.choice(["Caucasia", "Medellín", "Montería", "Planeta Rica"]),
+                    ciudad=rng.choice(["Medellín", "Bogotá", "Cali", "Barranquilla"]),
                     origen=rng.choice([Canal.WEB, Canal.WHATSAPP, Canal.REFERIDO]),
                     asesor_id=rng.choice(asesores).id,
                 )
@@ -177,7 +177,7 @@ async def sembrar() -> None:
                     documento=f"9{rng.randrange(10_000_000, 99_999_999)}",
                     telefono=f"+57 60{rng.randrange(1000000, 9999999)}",
                     email=f"contacto{i}@empresa.test",
-                    ciudad="Caucasia",
+                    ciudad="Medellín",
                     origen=Canal.REFERIDO,
                     asesor_id=rng.choice(asesores).id,
                 )
