@@ -1,0 +1,69 @@
+# Root of the uv workspace. The deployable application lives in apps/api;
+# reusable modelling code lives in packages/ml.
+[tool.uv.workspace]
+members = ["apps/api", "packages/ml"]
+
+[tool.uv.sources]
+corredor-ml = { workspace = true }
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+extend-exclude = [".venv", "**/alembic/versions/**"]
+
+[tool.ruff.lint]
+select = [
+  "E", "F", "W",      # pycodestyle / pyflakes
+  "I",                 # isort
+  "N",                 # pep8-naming
+  "UP",                # pyupgrade
+  "B",                 # bugbear
+  "C4",                # comprehensions
+  "SIM",               # simplify
+  "RUF",               # ruff-specific
+  "ASYNC",             # async correctness
+  "S",                 # bandit security
+]
+# flake8-type-checking (TC) is deliberately not enabled. FastAPI, Pydantic and
+# SQLAlchemy all evaluate annotations at runtime, so its advice to move imports
+# into `TYPE_CHECKING` blocks is wrong more often than it is right here.
+ignore = [
+  "S101",  # assert is fine in tests
+  "B008",  # FastAPI Depends() in defaults is idiomatic
+  "N811",  # `UUID as PgUUID` is the conventional SQLAlchemy alias
+  "N818",  # domain errors are named in Spanish, not suffixed "Error"
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S105", "S106"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["corredor", "corredor_ml"]
+
+
+[tool.mypy]
+python_version = "3.13"
+strict = true
+warn_unreachable = true
+plugins = ["pydantic.mypy"]
+exclude = ["alembic/versions/"]
+
+[[tool.mypy.overrides]]
+module = ["arq.*", "pwdlib.*"]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["apps/api/tests"]
+addopts = "-q --strict-markers --strict-config"
+markers = [
+  "integration: requires Postgres and Redis (docker compose up db redis)",
+]
+
+[tool.coverage.run]
+branch = true
+source = ["apps/api/src/corredor", "packages/ml/src/corredor_ml"]
+
+[tool.coverage.report]
+skip_covered = true
+show_missing = true

@@ -1,0 +1,53 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+dist/
+build/
+*.egg-info/
+
+# --- Node ---
+node_modules/
+.next/
+out/
+.turbo/
+*.tsbuildinfo
+.pnpm-store/
+
+# --- Environment / secrets ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+
+# --- Client-confidential material (never commit) ---
+# This repository is the open-source platform. Client proposals, pricing,
+# commercial terms and tenant data live outside version control.
+docs/private/
+tenants/
+*.client.md
+
+# --- Data & models ---
+data/
+*.db
+*.sqlite3
+*.parquet
+*.joblib
+*.onnx
+mlruns/
+
+# --- OS / editors ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
