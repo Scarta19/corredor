@@ -180,3 +180,36 @@ export interface ResumenRenovaciones {
   completadas: number;
   prima_en_riesgo: string;
 }
+
+export interface PasoEmbudo {
+  etapa: Etapa;
+  etiqueta: string;
+  alcanzadas: number;
+  conversion_desde_inicio: number;
+  conversion_desde_anterior: number;
+}
+
+export interface TableroGerencial {
+  desde: string;
+  hasta: string;
+  umbrales_renovacion: number[];
+  comercial: {
+    leads: number;
+    cotizaciones: number;
+    ventas: number;
+    perdidas: number;
+    conversion: number;
+    prima_ganada: string;
+  };
+  clientes: { nuevos: number; activos: number; recurrentes: number };
+  polizas: {
+    activas: number;
+    proximas_a_vencer: number;
+    vencidas: number;
+    renovaciones_completadas: number;
+    renovaciones_pendientes: number;
+  };
+  embudo: PasoEmbudo[];
+  motivos_perdida: { motivo: string; etiqueta: string; total: number }[];
+  ventanas_renovacion: { ventana: Ventana; etiqueta: string; total: number }[];
+}

@@ -171,3 +171,52 @@ class TestAutenticacion:
         respuesta = await cliente_http.get("/api/v1/ramos", headers={"X-Tenant": tenant.slug})
         assert respuesta.status_code == 200
         assert len(respuesta.json()) == len(RAMOS_BASE)
+
+
+class TestRoles:
+    """The dashboard is for management; an advisor's job is the queue."""
+
+    @pytest.fixture
+    async def asesor(self, session: AsyncSession, tenant: Tenant):
+        from corredor.core.seguridad import hashear_clave
+        from corredor.domain.enums import RolUsuario
+        from corredor.domain.tenancy import Usuario
+
+        from .conftest import CLAVE
+
+        usuario = Usuario(
+            tenant_id=tenant.id,
+            nombre="Asesora",
+            email=f"asesora-{tenant.slug}@prueba.test",
+            password_hash=hashear_clave(CLAVE),
+            rol=RolUsuario.ASESOR,
+        )
+        session.add(usuario)
+        await session.flush()
+        return usuario
+
+    async def test_un_asesor_no_ve_el_dashboard(self, cliente_http: AsyncClient, asesor) -> None:
+        respuesta = await cliente_http.get(
+            "/api/v1/crm/dashboard", headers=await cabecera_de(cliente_http, asesor)
+        )
+        assert respuesta.status_code == 403
+
+    async def test_un_asesor_si_ve_su_cola(self, cliente_http: AsyncClient, asesor) -> None:
+        respuesta = await cliente_http.get(
+            "/api/v1/crm/solicitudes",
+            headers=await cabecera_de(cliente_http, asesor),
+        )
+        assert respuesta.status_code == 200
+
+    async def test_un_administrador_pasa_el_control_de_gerencia(
+        self, cliente_http: AsyncClient, session: AsyncSession, tenant: Tenant
+    ) -> None:
+        # An agency with one administrator and no manager still needs the
+        # management views.
+        from .conftest import _crear_agencia
+
+        admin = await _crear_agencia(session, tenant)
+        respuesta = await cliente_http.get(
+            "/api/v1/crm/dashboard", headers=await cabecera_de(cliente_http, admin)
+        )
+        assert respuesta.status_code == 200

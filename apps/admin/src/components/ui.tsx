@@ -130,8 +130,25 @@ export function Puntaje({ valor }: { valor: number | null }) {
   );
 }
 
+const SOLO_FECHA = /^\d{4}-\d{2}-\d{2}$/;
+
+/**
+ * Format a date the API sent.
+ *
+ * `new Date("2026-09-01")` is parsed as UTC midnight, which in Colombia
+ * (UTC-5) renders as 31 August — so a policy expiring on the 1st would be
+ * shown as expiring the day before. Date-only values are therefore built as
+ * local dates; timestamps, which carry a time, are left alone.
+ */
 export function fecha(iso: string): string {
-  return new Date(iso).toLocaleDateString("es-CO", {
+  const valor = SOLO_FECHA.test(iso)
+    ? (() => {
+        const [anio, mes, dia] = iso.split("-").map(Number);
+        return new Date(anio, mes - 1, dia);
+      })()
+    : new Date(iso);
+
+  return valor.toLocaleDateString("es-CO", {
     day: "2-digit",
     month: "short",
     year: "numeric",

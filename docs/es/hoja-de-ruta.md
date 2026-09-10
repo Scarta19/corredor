@@ -37,7 +37,7 @@ instrumento comercial.*
 
 - [x] Esquema de predicciones con modelo, versión, variables y explicaciones ([ADR-0005](adr/0005-capa-de-inteligencia.md))
 - [x] Líneas base: puntaje de leads, riesgo de renovación, afinidad de venta cruzada
-- [ ] Módulo 6 — dashboard: embudo, ventanas de renovación (§15), desempeño por asesor
+- [x] **Módulo 6 — Dashboard** — embudo desde el historial, ventanas del §15, motivos de pérdida, solo gerencia
 - [ ] Comprensión de mensajes en reemplazo del menú numerado de WhatsApp
 - [ ] Modelos entrenados, cuando haya suficientes oportunidades cerradas para aprender de ellas
 - [ ] Segmentación de clientes y automatizaciones comerciales

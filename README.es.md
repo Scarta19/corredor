@@ -36,7 +36,7 @@ agencias, cada una con su catálogo, sus formularios, su pipeline y su cartera.
 | 3 | **WhatsApp** | Un canal *hacia dentro* de la plataforma: recibe, clasifica y deriva a una persona | Pendiente |
 | 4 | **CRM** | Clientes, solicitudes, cotizaciones, pólizas y el pipeline comercial | **Listo** |
 | 5 | **Renovaciones** | Control de vencimientos con acciones escalonadas a 60/30/15/7 días | **Listo** |
-| 6 | **Dashboard** | Embudo de conversión, riesgo de renovación, desempeño por asesor | Esquema |
+| 6 | **Dashboard** | Embudo de conversión, ventanas de renovación, motivos de pérdida | **Listo** |
 
 ## Qué significa "con inteligencia desde el diseño"
 

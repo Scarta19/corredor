@@ -8,6 +8,7 @@ import type { UsuarioSesion } from "@/lib/tipos";
 
 const enlaces: { href: Route; etiqueta: string }[] = [
   { href: "/", etiqueta: "Resumen" },
+  { href: "/dashboard", etiqueta: "Dashboard" },
   { href: "/solicitudes", etiqueta: "Solicitudes" },
   { href: "/pipeline", etiqueta: "Pipeline" },
   { href: "/renovaciones", etiqueta: "Renovaciones" },
