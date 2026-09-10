@@ -16,8 +16,9 @@ managing clients.*
 - [x] Demo tenant seed with a synthetic book of business
 - [x] **Módulo 1 — Web profesional** — 9 routes, the four §4 actions, catalogue driven by the API, sitemap/robots/JSON-LD
 - [x] **Módulo 2 — Cotizador inteligente** — dynamic form rendering, domain-level validation, `POST /solicitudes`, código `COT-000125`, client dedup, opportunity + audit event + lead score in one transaction
-- [ ] Authentication and advisor accounts ← next
-- [ ] Módulo 4 — CRM: client record, request queue, pipeline board
+- [x] **Authentication** — Argon2id, JWT with tenant, httpOnly session in the CRM
+- [x] **Módulo 4 — CRM** — request queue ordered by lead score, §10 pipeline board, §9 single client view
+- [ ] Módulo 4 — writes: edit clients, register policies and quotations by hand ← next
 
 ## Phase 2 — Automation
 

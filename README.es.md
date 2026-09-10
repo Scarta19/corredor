@@ -34,7 +34,7 @@ agencias, cada una con su catálogo, sus formularios, su pipeline y su cartera.
 | 1 | **Web profesional** | Sitio público diseñado para generar acciones, no solo para informar | **Listo** |
 | 2 | **Cotizador inteligente** | Formularios por ramo → una solicitud estructurada, nunca un chat por transcribir | **Listo** |
 | 3 | **WhatsApp** | Un canal *hacia dentro* de la plataforma: recibe, clasifica y deriva a una persona | Pendiente |
-| 4 | **CRM** | Clientes, solicitudes, cotizaciones, pólizas y el pipeline comercial | Esquema |
+| 4 | **CRM** | Clientes, solicitudes, cotizaciones, pólizas y el pipeline comercial | **Listo** |
 | 5 | **Renovaciones** | Control de vencimientos con acciones escalonadas a 60/30/15/7 días | Motor listo |
 | 6 | **Dashboard** | Embudo de conversión, riesgo de renovación, desempeño por asesor | Esquema |
 
@@ -94,6 +94,7 @@ de información en lugar de seis sistemas que se sincronizan
 | Herramientas | uv · ruff · mypy `strict` · pytest · GitHub Actions |
 
 Recorrido completo: [docs/es/arquitectura/vision-general.md](docs/es/arquitectura/vision-general.md).
+Cómo se construyó cada módulo, y por qué: [docs/es/modulos/](docs/es/modulos/README.md).
 
 ## Cómo levantarlo
 

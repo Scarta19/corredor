@@ -16,8 +16,9 @@ administrar clientes.*
 - [x] Semilla de agencia de demostración con cartera sintética
 - [x] **Módulo 1 — Web profesional** — 9 rutas, las cuatro acciones del §4, catálogo servido por la API, sitemap/robots/JSON-LD
 - [x] **Módulo 2 — Cotizador inteligente** — formularios dinámicos, validación en el dominio, `POST /solicitudes`, código `COT-000125`, deduplicación de clientes, oportunidad + evento de auditoría + puntaje en una sola transacción
-- [ ] Autenticación y cuentas de asesores ← siguiente
-- [ ] Módulo 4 — CRM: ficha del cliente, bandeja de solicitudes, tablero del pipeline
+- [x] **Autenticación** — Argon2id, JWT con tenant, sesión httpOnly en el CRM
+- [x] **Módulo 4 — CRM** — cola ordenada por puntaje, tablero del §10, ficha única del §9
+- [ ] Módulo 4 — escritura: editar clientes, registrar pólizas y cotizaciones a mano ← siguiente
 
 ## Fase 2 — Automatización
 
