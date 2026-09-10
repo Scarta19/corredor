@@ -12,8 +12,8 @@ managing clients.*
 - [x] Dynamic quote-form schema and validation ([ADR-0003](adr/0003-formularios-dinamicos.md))
 - [x] Public catalogue API (`/ramos`, `/ramos/{codigo}`)
 - [x] Demo tenant seed with a synthetic book of business
-- [ ] **Módulo 1 — Web profesional** ← in progress
-- [ ] Módulo 2 — quote submission endpoint, código `COT-000125`, lead creation
+- [x] **Módulo 1 — Web profesional** — 9 routes, the four §4 actions, catalogue driven by the API
+- [ ] **Módulo 2 — cotizador** ← next: dynamic form rendering, submission endpoint, código `COT-000125`, lead creation
 - [ ] Authentication and advisor accounts
 - [ ] Módulo 4 — CRM: client record, request queue, pipeline board
 

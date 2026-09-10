@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+/*
+ * Design tokens.
+ *
+ * One accent, one neutral ramp, one success. Insurance is a trust purchase:
+ * the palette stays calm and the emphasis goes on the actions, which is the
+ * whole point of the page (§4 — "debe estar diseñada para generar acciones").
+ */
+@theme {
+  --color-tinta-50: #f2f6fb;
+  --color-tinta-100: #e3ecf6;
+  --color-tinta-200: #c6d8ec;
+  --color-tinta-300: #97b9dc;
+  --color-tinta-400: #6094c8;
+  --color-tinta-500: #3d75b1;
+  --color-tinta-600: #2c5b94;
+  --color-tinta-700: #254a78;
+  --color-tinta-800: #223f64;
+  --color-tinta-900: #1f3654;
+  --color-tinta-950: #142338;
+
+  --color-piedra-50: #f8fafb;
+  --color-piedra-100: #f1f4f6;
+  --color-piedra-200: #e4e9ee;
+  --color-piedra-300: #cfd7e0;
+  --color-piedra-400: #9aa8b8;
+  --color-piedra-500: #6b7c8f;
+  --color-piedra-600: #526173;
+  --color-piedra-700: #414d5c;
+  --color-piedra-800: #2d3742;
+  --color-piedra-900: #1c232b;
+  --color-piedra-950: #11161c;
+
+  --color-verde-500: #1f9d6b;
+  --color-verde-600: #178057;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --fondo: var(--color-piedra-50);
+  --fondo-elevado: #ffffff;
+  --borde: var(--color-piedra-200);
+  --texto: var(--color-piedra-900);
+  --texto-suave: var(--color-piedra-600);
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fondo: var(--color-piedra-950);
+    --fondo-elevado: var(--color-piedra-900);
+    --borde: var(--color-piedra-800);
+    --texto: var(--color-piedra-100);
+    --texto-suave: var(--color-piedra-400);
+    color-scheme: dark;
+  }
+}
+
+@theme inline {
+  --color-fondo: var(--fondo);
+  --color-superficie: var(--fondo-elevado);
+  --color-borde: var(--borde);
+  --color-texto: var(--texto);
+  --color-suave: var(--texto-suave);
+}
+
+body {
+  background: var(--fondo);
+  color: var(--texto);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Keyboard users must always be able to see where they are. */
+:focus-visible {
+  outline: 2px solid var(--color-tinta-500);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

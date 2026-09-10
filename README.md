@@ -26,8 +26,8 @@ each with its own catalogue, forms, pipeline and book of business.
 
 | # | Module | What it does | State |
 |---|--------|--------------|-------|
-| 1 | **Web profesional** | Public site built to generate actions, not just inform | In progress |
-| 2 | **Cotizador inteligente** | Per-ramo dynamic forms → a structured request, never a chat message to transcribe | Schema + API |
+| 1 | **Web profesional** | Public site built to generate actions, not just inform | **Done** |
+| 2 | **Cotizador inteligente** | Per-ramo dynamic forms → a structured request, never a chat message to transcribe | In progress |
 | 3 | **WhatsApp** | A channel *into* the platform: capture, classify, hand off to a person | Planned |
 | 4 | **CRM** | Clients, requests, quotes, policies and the commercial pipeline | Schema |
 | 5 | **Renovaciones** | Expiry tracking with escalating 60/30/15/7-day actions | Engine done |
