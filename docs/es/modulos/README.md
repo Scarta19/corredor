@@ -22,7 +22,7 @@ reconstruir después.
 | 2 | Cotizador inteligente | Listo | [modulo-2-cotizador.md](modulo-2-cotizador.md) |
 | — | Autenticación | Listo | [autenticacion.md](autenticacion.md) |
 | 4 | CRM | En curso | [modulo-4-crm.md](modulo-4-crm.md) |
-| 5 | Renovaciones | Motor listo | — |
+| 5 | Renovaciones | Listo | [modulo-5-renovaciones.md](modulo-5-renovaciones.md) |
 | 6 | Dashboard | Pendiente | — |
 | 3 | WhatsApp | Pendiente | — |
 

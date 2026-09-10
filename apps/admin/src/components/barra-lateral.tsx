@@ -10,6 +10,7 @@ const enlaces: { href: Route; etiqueta: string }[] = [
   { href: "/", etiqueta: "Resumen" },
   { href: "/solicitudes", etiqueta: "Solicitudes" },
   { href: "/pipeline", etiqueta: "Pipeline" },
+  { href: "/renovaciones", etiqueta: "Renovaciones" },
   { href: "/clientes", etiqueta: "Clientes" },
 ];
 

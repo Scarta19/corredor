@@ -137,3 +137,46 @@ export const MOTIVOS_PERDIDA = [
   { valor: "desiste", etiqueta: "Desiste" },
   { valor: "otro", etiqueta: "Otro" },
 ];
+
+export interface PolizaPorVencer {
+  id: string;
+  numero: string;
+  cliente_id: string;
+  cliente: string;
+  telefono: string | null;
+  ramo: string;
+  aseguradora: string;
+  prima: string;
+  fecha_vencimiento: string;
+  dias_para_vencimiento: number;
+  ventana: Ventana;
+  asesor: string | null;
+  riesgo: number | null;
+  nivel_riesgo: Nivel | null;
+  acciones_pendientes: number;
+}
+
+export interface Bucket {
+  ventana: Ventana;
+  etiqueta: string;
+  total: number;
+  prima_total: string;
+  polizas: PolizaPorVencer[];
+}
+
+export interface AccionRenovacion {
+  id: string;
+  umbral_dias: number;
+  fecha_objetivo: string;
+  estado: "pendiente" | "en_gestion" | "completada" | "omitida";
+  notas: string | null;
+  completada_en: string | null;
+}
+
+export interface ResumenRenovaciones {
+  umbrales: number[];
+  pendientes: number;
+  en_gestion: number;
+  completadas: number;
+  prima_en_riesgo: string;
+}

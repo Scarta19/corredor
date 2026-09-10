@@ -25,7 +25,7 @@ managing clients.*
 *Goal: the system starts doing work that people do by hand today.*
 
 - [x] Renewal planning engine ([ADR-0004](adr/0004-motor-de-renovaciones.md))
-- [ ] Scheduled renewal sweep (Arq worker, daily)
+- [x] **Módulo 5 — Renovaciones** — nightly Arq sweep, churn risk scoring, §15 bucket board
 - [ ] Notifications: new lead to the team, renewal actions to the advisor
 - [ ] Lead assignment rules
 - [ ] Módulo 3 — WhatsApp Cloud API: inbound webhook, capture, handoff

@@ -34,6 +34,15 @@ api: ## Run the API with reload
 web: ## Run the public web app
 	cd apps/web && npm run dev
 
+admin: ## Run the CRM panel
+	cd apps/admin && npm run dev
+
+worker: ## Run the scheduled worker (nightly renewal sweep)
+	uv run arq corredor.workers.main.WorkerSettings
+
+barrido: ## Run the renewal sweep once, now
+	uv run python -m corredor.scripts.barrido
+
 test: ## Run the test suite
 	uv run pytest
 
@@ -46,4 +55,4 @@ format: ## Auto-format
 	uv run ruff check --fix .
 	uv run ruff format .
 
-.PHONY: help install up down reset migrate revision seed api web test lint format
+.PHONY: help install up down reset migrate revision seed api web admin worker barrido test lint format

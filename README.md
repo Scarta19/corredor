@@ -35,7 +35,7 @@ each with its own catalogue, forms, pipeline and book of business.
 | 2 | **Cotizador inteligente** | Per-ramo dynamic forms → a structured request, never a chat message to transcribe | **Done** |
 | 3 | **WhatsApp** | A channel *into* the platform: capture, classify, hand off to a person | Planned |
 | 4 | **CRM** | Clients, requests, quotes, policies and the commercial pipeline | **Done** |
-| 5 | **Renovaciones** | Expiry tracking with escalating 60/30/15/7-day actions | Engine done |
+| 5 | **Renovaciones** | Expiry tracking with escalating 60/30/15/7-day actions | **Done** |
 | 6 | **Dashboard** | Conversion funnel, renewal risk buckets, advisor performance | Schema |
 
 ## What makes it AI-native

@@ -21,7 +21,7 @@ reconstruct later.
 | 2 | Cotizador inteligente | Done | [modulo-2-cotizador.md](modulo-2-cotizador.md) |
 | — | Autenticación | Done | [autenticacion.md](autenticacion.md) |
 | 4 | CRM | In progress | [modulo-4-crm.md](modulo-4-crm.md) |
-| 5 | Renovaciones | Engine done | — |
+| 5 | Renovaciones | Done | [modulo-5-renovaciones.md](modulo-5-renovaciones.md) |
 | 6 | Dashboard | Planned | — |
 | 3 | WhatsApp | Planned | — |
 

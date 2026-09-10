@@ -25,7 +25,7 @@ administrar clientes.*
 *Objetivo: el sistema empieza a hacer trabajo que hoy hace una persona.*
 
 - [x] Motor de planificación de renovaciones ([ADR-0004](adr/0004-motor-de-renovaciones.md))
-- [ ] Barrido programado de renovaciones (worker Arq, diario)
+- [x] **Módulo 5 — Renovaciones** — barrido nocturno con Arq, riesgo de fuga, tablero de ventanas del §15
 - [ ] Notificaciones: nuevo lead al equipo, acciones de renovación al asesor
 - [ ] Reglas de asignación de leads
 - [ ] Módulo 3 — WhatsApp Cloud API: webhook de entrada, captura, derivación
