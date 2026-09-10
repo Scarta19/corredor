@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import { Encabezado } from "@/components/encabezado";
 import { PieDePagina } from "@/components/pie-de-pagina";
 import { BotonWhatsapp } from "@/components/boton-whatsapp";
+import { DatosAgencia } from "@/components/datos-estructurados";
 import { config } from "@/lib/config";
 
 import "./globals.css";
@@ -59,6 +60,7 @@ export default function RootLayout({
           <PieDePagina />
         </div>
         <BotonWhatsapp />
+        <DatosAgencia />
       </body>
     </html>
   );

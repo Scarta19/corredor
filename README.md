@@ -30,7 +30,7 @@ each with its own catalogue, forms, pipeline and book of business.
 | # | Module | What it does | State |
 |---|--------|--------------|-------|
 | 1 | **Web profesional** | Public site built to generate actions, not just inform | **Done** |
-| 2 | **Cotizador inteligente** | Per-ramo dynamic forms → a structured request, never a chat message to transcribe | In progress |
+| 2 | **Cotizador inteligente** | Per-ramo dynamic forms → a structured request, never a chat message to transcribe | **Done** |
 | 3 | **WhatsApp** | A channel *into* the platform: capture, classify, hand off to a person | Planned |
 | 4 | **CRM** | Clients, requests, quotes, policies and the commercial pipeline | Schema |
 | 5 | **Renovaciones** | Expiry tracking with escalating 60/30/15/7-day actions | Engine done |
@@ -127,6 +127,7 @@ The choices worth arguing about are written down, with their costs:
 | [0005](docs/adr/0005-capa-de-inteligencia.md) | The intelligence layer is structural |
 | [0006](docs/adr/0006-lenguaje-del-dominio.md) | The domain is modelled in Spanish |
 | [0007](docs/adr/0007-stack-y-monorepo.md) | Python API + Next.js in one repository |
+| [0008](docs/adr/0008-validacion-en-el-dominio.md) | Submission validation lives in the domain |
 
 The domain is modelled in the vocabulary brokers actually use — *ramo*,
 *póliza*, *cotización*, *asesor* — while the technical scaffolding and all

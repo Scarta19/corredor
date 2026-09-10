@@ -12,9 +12,9 @@ managing clients.*
 - [x] Dynamic quote-form schema and validation ([ADR-0003](adr/0003-formularios-dinamicos.md))
 - [x] Public catalogue API (`/ramos`, `/ramos/{codigo}`)
 - [x] Demo tenant seed with a synthetic book of business
-- [x] **Módulo 1 — Web profesional** — 9 routes, the four §4 actions, catalogue driven by the API
-- [ ] **Módulo 2 — cotizador** ← next: dynamic form rendering, submission endpoint, código `COT-000125`, lead creation
-- [ ] Authentication and advisor accounts
+- [x] **Módulo 1 — Web profesional** — 9 routes, the four §4 actions, catalogue driven by the API, sitemap/robots/JSON-LD
+- [x] **Módulo 2 — Cotizador inteligente** — dynamic form rendering, domain-level validation, `POST /solicitudes`, código `COT-000125`, client dedup, opportunity + audit event + lead score in one transaction
+- [ ] Authentication and advisor accounts ← next
 - [ ] Módulo 4 — CRM: client record, request queue, pipeline board
 
 ## Phase 2 — Automation

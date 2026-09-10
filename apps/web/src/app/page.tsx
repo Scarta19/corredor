@@ -1,5 +1,6 @@
 import { RejillaAcciones } from "@/components/acciones";
 import { Cierre } from "@/components/cierre";
+import { DatosPreguntas } from "@/components/datos-estructurados";
 import { ListaPreguntas } from "@/components/preguntas";
 import { RejillaRamos } from "@/components/ramos";
 import { Boton, Contenedor, Seccion, TituloSeccion } from "@/components/ui";
@@ -126,6 +127,7 @@ export default async function Inicio() {
         </div>
       </Seccion>
 
+      <DatosPreguntas />
       <Cierre />
     </>
   );

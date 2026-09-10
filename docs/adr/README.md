@@ -16,3 +16,4 @@ supersedes it and says so.
 | [0005](0005-capa-de-inteligencia.md) | The intelligence layer is structural, not a phase-3 feature | Accepted |
 | [0006](0006-lenguaje-del-dominio.md) | The domain is modelled in Spanish | Accepted |
 | [0007](0007-stack-y-monorepo.md) | Python API + Next.js frontends in one repository | Accepted |
+| [0008](0008-validacion-en-el-dominio.md) | Submission validation lives in the domain | Accepted |

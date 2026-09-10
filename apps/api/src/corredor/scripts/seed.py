@@ -230,11 +230,20 @@ async def sembrar() -> None:
         )
 
 
-def main() -> None:
+async def _ejecutar() -> None:
+    """Seed and tear down inside a single event loop.
+
+    The engine's connections belong to the loop that created them, so
+    disposing from a second `asyncio.run` raises "Event loop is closed".
+    """
     try:
-        asyncio.run(sembrar())
+        await sembrar()
     finally:
-        asyncio.run(dispose_engine())
+        await dispose_engine()
+
+
+def main() -> None:
+    asyncio.run(_ejecutar())
 
 
 if __name__ == "__main__":

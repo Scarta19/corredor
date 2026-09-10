@@ -54,6 +54,11 @@ ignore_missing_imports = true
 
 [tool.pytest.ini_options]
 asyncio_mode = "auto"
+# The database engine is created once per session, and its connections belong
+# to the loop that opened them. Without a session-scoped loop, every test after
+# the first fails on teardown with "Event loop is closed".
+asyncio_default_fixture_loop_scope = "session"
+asyncio_default_test_loop_scope = "session"
 testpaths = ["apps/api/tests"]
 addopts = "-q --strict-markers --strict-config"
 markers = [
