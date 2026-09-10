@@ -1,5 +1,7 @@
 # Architecture Decision Records
 
+🇨🇴 [Leer en español](../es/adr/README.md)
+
 One file per decision that was expensive to make and would be expensive to
 reverse. Each records the context at the time, the decision, and what it
 costs — including the cases where the cost is real and we took it anyway.
@@ -17,3 +19,4 @@ supersedes it and says so.
 | [0006](0006-lenguaje-del-dominio.md) | The domain is modelled in Spanish | Accepted |
 | [0007](0007-stack-y-monorepo.md) | Python API + Next.js frontends in one repository | Accepted |
 | [0008](0008-validacion-en-el-dominio.md) | Submission validation lives in the domain | Accepted |
+| [0009](0009-documentacion-bilingue.md) | Documentation is bilingual | Accepted |

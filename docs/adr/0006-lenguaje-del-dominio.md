@@ -1,6 +1,7 @@
 # 0006 — The domain is modelled in Spanish
 
 **Status:** Accepted · 2026-09-09
+**Amended by:** [0009 — Documentation is bilingual](0009-documentacion-bilingue.md)
 
 ## Context
 
@@ -30,3 +31,9 @@ readable to a contributor who does not speak Spanish.
 **We pay:** mixed-language identifiers, which look inconsistent until the rule
 is understood. Accents are dropped in identifiers (`Poliza`, not `Póliza`) and
 kept in every user-facing string.
+
+## Later note
+
+[ADR-0009](0009-documentacion-bilingue.md) revised the documentation half of
+this decision: prose now exists in both languages. The part about code stands
+exactly as written above.

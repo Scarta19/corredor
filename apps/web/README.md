@@ -1,5 +1,7 @@
 # apps/web — Módulo 1, web profesional
 
+🇨🇴 [Leer en español](README.es.md)
+
 The public site: the platform's front door and its main capture channel.
 
 Per §4 of the platform brief this is **not** a brochure. Every page ends with
@@ -21,19 +23,24 @@ the same four actions, and the site's job is to produce them:
 /empresas    Seguros para empresas
 /seguros     Catálogo completo, agrupado por audiencia
 /cotizar     Selector de ramo
-/cotizar/[codigo]  Qué se pregunta para ese ramo, y cómo empezar
+/cotizar/[codigo]  Formulario dinámico de ese ramo
 /contacto    WhatsApp, teléfono, correo
 /renovar     Proceso de renovación
 /reportar    Siniestros, cambios, certificados
 ```
 
-## Two things worth knowing
+## Three things worth knowing
 
 **The catalogue is not hard-coded.** Lines of business and their form fields
 come from `GET /api/v1/ramos`. A brokerage that adds a ramo sees it on the
-site — including its own page at `/cotizar/[codigo]`, listing exactly what
-will be asked — with no frontend release. See
-[ADR-0003](../../docs/adr/0003-formularios-dinamicos.md).
+site — with its own page at `/cotizar/[codigo]` and a working form — with no
+frontend release. See [ADR-0003](../../docs/adr/0003-formularios-dinamicos.md).
+
+**Submissions go through the site's own route handler.** The browser posts to
+same-origin `/api/solicitudes` and Next forwards it to the API with the tenant
+header attached. A visitor cannot submit into another brokerage by editing a
+request, the internal API URL never reaches the client bundle, and a public
+endpoint needs no CORS.
 
 **The site survives the API being down.** `listarRamos` returns an empty list
 rather than throwing, and the catalogue renders a fallback that puts WhatsApp
@@ -52,6 +59,7 @@ NEXT_PUBLIC_API_URL=http://localhost:8000
 NEXT_PUBLIC_TENANT=demo
 NEXT_PUBLIC_BRAND="Agencia Demo de Seguros"
 NEXT_PUBLIC_WHATSAPP=573000000000
+NEXT_PUBLIC_INDEXABLE=false   # robots.txt blocks crawlers unless "true"
 ```
 
 ## Development

@@ -1,5 +1,7 @@
 # Roadmap
 
+🇨🇴 [Leer en español](es/hoja-de-ruta.md)
+
 Three delivery phases. The order is the brief's; the reasoning for building
 some foundations ahead of their phase is in the ADRs they link to.
 

@@ -5,6 +5,8 @@
 
 **An AI-native platform for insurance brokers.**
 
+🇨🇴 [Léelo en español](README.es.md)
+
 Most brokerages run on a website that only informs, a WhatsApp number, and a
 spreadsheet of renewal dates. The information exists; it is just scattered
 across three places that never talk to each other, so a lead arrives as a chat
@@ -128,6 +130,7 @@ The choices worth arguing about are written down, with their costs:
 | [0006](docs/adr/0006-lenguaje-del-dominio.md) | The domain is modelled in Spanish |
 | [0007](docs/adr/0007-stack-y-monorepo.md) | Python API + Next.js in one repository |
 | [0008](docs/adr/0008-validacion-en-el-dominio.md) | Submission validation lives in the domain |
+| [0009](docs/adr/0009-documentacion-bilingue.md) | Documentation is bilingual |
 
 The domain is modelled in the vocabulary brokers actually use — *ramo*,
 *póliza*, *cotización*, *asesor* — while the technical scaffolding and all

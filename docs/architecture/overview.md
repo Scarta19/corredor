@@ -1,5 +1,7 @@
 # Architecture overview
 
+🇨🇴 [Leer en español](../es/arquitectura/vision-general.md)
+
 ## The shape of the system
 
 One API owns the domain. Everything else — the public site, the CRM, the

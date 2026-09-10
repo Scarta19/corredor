@@ -1,0 +1,49 @@
+# Hoja de ruta
+
+🇬🇧 [Read in English](../roadmap.md)
+
+Tres fases de entrega. El orden es el del documento del proyecto; el porqué de
+construir algunos cimientos antes de su fase está en los ADR enlazados.
+
+## Fase 1 — MVP
+
+*Objetivo: la agencia tiene un canal digital organizado para captar y
+administrar clientes.*
+
+- [x] Modelo de dominio: tenancy, catálogo, CRM, pipeline, pólizas, renovaciones
+- [x] Esquema y validación de formularios dinámicos ([ADR-0003](adr/0003-formularios-dinamicos.md))
+- [x] API pública de catálogo (`/ramos`, `/ramos/{codigo}`)
+- [x] Semilla de agencia de demostración con cartera sintética
+- [x] **Módulo 1 — Web profesional** — 9 rutas, las cuatro acciones del §4, catálogo servido por la API, sitemap/robots/JSON-LD
+- [x] **Módulo 2 — Cotizador inteligente** — formularios dinámicos, validación en el dominio, `POST /solicitudes`, código `COT-000125`, deduplicación de clientes, oportunidad + evento de auditoría + puntaje en una sola transacción
+- [ ] Autenticación y cuentas de asesores ← siguiente
+- [ ] Módulo 4 — CRM: ficha del cliente, bandeja de solicitudes, tablero del pipeline
+
+## Fase 2 — Automatización
+
+*Objetivo: el sistema empieza a hacer trabajo que hoy hace una persona.*
+
+- [x] Motor de planificación de renovaciones ([ADR-0004](adr/0004-motor-de-renovaciones.md))
+- [ ] Barrido programado de renovaciones (worker Arq, diario)
+- [ ] Notificaciones: nuevo lead al equipo, acciones de renovación al asesor
+- [ ] Reglas de asignación de leads
+- [ ] Módulo 3 — WhatsApp Cloud API: webhook de entrada, captura, derivación
+
+## Fase 3 — Inteligencia
+
+*Objetivo: la plataforma deja de ser un sistema de registro y pasa a ser un
+instrumento comercial.*
+
+- [x] Esquema de predicciones con modelo, versión, variables y explicaciones ([ADR-0005](adr/0005-capa-de-inteligencia.md))
+- [x] Líneas base: puntaje de leads, riesgo de renovación, afinidad de venta cruzada
+- [ ] Módulo 6 — dashboard: embudo, ventanas de renovación (§15), desempeño por asesor
+- [ ] Comprensión de mensajes en reemplazo del menú numerado de WhatsApp
+- [ ] Modelos entrenados, cuando haya suficientes oportunidades cerradas para aprender de ellas
+- [ ] Segmentación de clientes y automatizaciones comerciales
+
+## Más allá
+
+§19 del documento: la plataforma se generaliza a los intermediarios de seguros
+en general. El esquema multi-tenant ([ADR-0002](adr/0002-multi-tenancy.md)) era
+la parte que había que decidir temprano; lo demás —módulos configurables,
+siniestros, gestión documental— es aditivo.
